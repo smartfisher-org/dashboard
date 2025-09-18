@@ -59,8 +59,8 @@ export function SimpleChart({
             dataKey={dataKey} 
             stroke={color} 
             strokeWidth={2}
-            dot={{ fill: color, strokeWidth: 0, r: 3 }}
-            activeDot={{ r: 4, fill: color }}
+            dot={false}
+            activeDot={false}
           />
         </LineChart>
       </ResponsiveContainer>
