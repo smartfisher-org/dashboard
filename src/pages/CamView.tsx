@@ -242,7 +242,7 @@ const CamView = () => {
                   <div className="relative bg-gray-900 rounded-lg overflow-hidden aspect-video">
                     {/* Live stream */}
                     <img 
-                      src="/fish-detection-stream.png" 
+                      src="/cam-view-placeholder.png" 
                       alt="Fish Detection Live Stream" 
                       className="w-full h-full object-cover"
                     />
