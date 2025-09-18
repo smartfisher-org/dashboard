@@ -7,7 +7,8 @@ import {
   Map, 
   Settings, 
   TrendingUp,
-  Camera
+  Camera,
+  ExternalLink
 } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -24,7 +25,6 @@ const navigation = [
 const bottomNavigation = [
   { name: 'Settings', icon: Settings, href: '/settings' },
 ];
-
 
 export function DashboardSidebar({ className }: SidebarProps) {
   const location = useLocation();
@@ -65,7 +65,7 @@ export function DashboardSidebar({ className }: SidebarProps) {
       </nav>
 
       {/* Bottom Navigation */}
-      <div className="p-4 pt-0">
+      <div className="p-4 pt-0 space-y-2">
         {bottomNavigation.map((item) => {
           const isActive = location.pathname === item.href;
           return (
@@ -84,6 +84,17 @@ export function DashboardSidebar({ className }: SidebarProps) {
             </Link>
           );
         })}
+        
+        {/* Back to Website Link */}
+        <a
+          href="https://smartfisher.pt"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-all duration-200"
+        >
+          <ExternalLink className="w-4 h-4" />
+          Back to Website
+        </a>
       </div>
     </div>
   );
